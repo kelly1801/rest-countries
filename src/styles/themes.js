@@ -8,6 +8,6 @@ export const LightTheme = {
 export const DarkTheme = {
     bg : 'var(--DarkBg)',
     text : 'var(--White)',
-    elements: '--DarkElements',
+    elements: 'var(--DarkElements)',
     inputs: 'var(--LightInput)'
 }

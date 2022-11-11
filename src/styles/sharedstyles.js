@@ -1,8 +1,7 @@
 import {createGlobalStyle} from "styled-components";
 
 const SharedStyles = createGlobalStyle`
-body {
-  
+
   * {
     margin: 0;
     padding: 0;
@@ -19,7 +18,7 @@ body {
     --LightBg: hsl(0, 0%, 98%);
     --White: hsl(0, 0%, 100%);
   }
-}
+
 `
 
 export default SharedStyles
