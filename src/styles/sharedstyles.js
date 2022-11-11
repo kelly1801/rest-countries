@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const SharedStyles = createGlobalStyle`
 
@@ -19,6 +19,12 @@ const SharedStyles = createGlobalStyle`
     --White: hsl(0, 0%, 100%);
   }
 
-`
+  h1 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+`;
 
-export default SharedStyles
+export default SharedStyles;

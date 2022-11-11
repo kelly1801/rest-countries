@@ -1,6 +1,6 @@
-export const request = {
+export const requests = {
     getAllCountries: `/all`,
-    getCountryByRegion: `region/{region}`,
-    getCountryByName: `name/{name}`,
+    getCountryByRegion: `region/`,
+    getCountryByName: `name/`,
 
 }
