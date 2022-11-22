@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, {css} from "styled-components";
 
 export const NavContainer = styled.nav`
   background-color: ${(props) => props.theme.elements};
@@ -9,7 +9,6 @@ export const NavContainer = styled.nav`
   align-items: center;
   padding: 1rem 2rem;
   height: 3.5rem;
-
   div {
     display: flex;
     align-items: center;
@@ -17,6 +16,26 @@ export const NavContainer = styled.nav`
   }
 `;
 
+export const Button = styled.button`
+  cursor: pointer;
+  background-color: ${(props) => props.theme.elements};
+  color: ${(props) => props.theme.text};
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.0532439);
+  border: none;
+  padding: 0.2rem 0.5rem;
+  ${props => props.back && css `
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    background: none;
+    border: none;
+  `}
+`
+export const GroupButtons = styled.span`
+  display: flex;
+  gap: 0.5rem;
+`
 export const Main = styled.main`
   background-color: ${(props) => props.theme.bg};
   color: ${(props) => props.theme.text};
@@ -36,10 +55,8 @@ export const FlagsContainer = styled.section`
   grid-template-columns: repeat(4, 26%);
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-
   padding: 2rem 0;
   width: 100%;
-
   @media (max-width: 465px) {
     grid-template-columns: repeat(1, 100%);
   }
@@ -59,7 +76,6 @@ export const SearchContainer = styled.div`
     outline: none;
     background-color: transparent;
     color: ${(props) => props.theme.text};
-
     width: 100%;
     ::placeholder {
       color: ${(props) => props.theme.text};
@@ -73,7 +89,6 @@ export const FilterContainer = styled.details`
   font-size: 14px;
   position: relative;
   div {
-    
     background-color: ${(props) => props.theme.elements};
     width: 100%;
     border-radius: 5px;
@@ -82,10 +97,8 @@ export const FilterContainer = styled.details`
     justify-content: center;
     flex-direction: column;
     padding: 0 0.8rem;
-
     position: absolute;
     box-shadow: 0 2px 9px rgba(0, 0, 0, 0.0532439);
-
     option {
       margin: 0.2rem 0;
       cursor: pointer;
@@ -110,7 +123,7 @@ export const CountryContainer = styled.figure`
   max-height: 250px;
   overflow: hidden;
   border-radius: 5px;
-
+  cursor: pointer;
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.0532439);
   display: flex;
   flex-direction: column;
@@ -145,3 +158,56 @@ export const CountryDescription = styled.figcaption`
   }
   font-size: 0.8rem;
 `;
+
+export const DetailsContainer = styled.div`
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+ 
+  figure {
+    width: 50%;
+    border-radius: 5px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    
+    }
+    
+  }
+
+
+  @media (max-width: 414px) {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    figure {
+      width: 100%;
+    }
+`
+export const InfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  width: 50%;
+  h1 {
+    font-size: 20px;
+  }
+  div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 0.2rem;
+    padding: 2rem 0;
+  }
+
+  @media (max-width: 414px) {
+    width: 100%;
+    padding: 0.5rem 0;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+`

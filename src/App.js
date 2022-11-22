@@ -4,6 +4,7 @@ import {CountryContext} from "./context/countryContext";
 import {useContext} from "react";
 import MainContent from "./components/MainContent";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {CountryPage} from "./pages/CountryPage";
 function App() {
     const {theme} = useContext(CountryContext);
     return (
@@ -12,6 +13,7 @@ function App() {
           <BrowserRouter>
               <Routes>
                   <Route path='/' element={<MainContent/>}/>
+                  <Route path=':countryName' element={<CountryPage/>}/>
               </Routes>
           </BrowserRouter>
 

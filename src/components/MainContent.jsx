@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { Country } from "./UI/Country";
 const MainContent = () => {
   const { flagsCollection } = useContext(CountryContext);
+
   return (
     <Main>
       <MainHeader>
@@ -14,7 +15,7 @@ const MainContent = () => {
       </MainHeader>
         <FlagsContainer>
           {flagsCollection.map(
-            ({ flags, capital, population, region, name }, index) => (
+            ({ flags, capital, population, region, name, languages }, index) => (
               <Country
                   key={index}
                 flag={flags.svg}
@@ -23,7 +24,8 @@ const MainContent = () => {
                 region={region}
                 countryName={name.common}
               />
-            )
+
+              )
           )}
         </FlagsContainer>
 

@@ -21,12 +21,12 @@ export const CountryProvider = ({ children }) => {
     const response = await axios.get(fetchUrl);
     const countries = response.data;
 
-    setFlags([...countries]);
+    setFlags(countries);
   }
+
   useEffect(() => {
     fetchData();
   }, [fetchUrl]);
-
 
   const value = {
     toggleTheme,
